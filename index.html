@@ -18,7 +18,7 @@
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
         </div>
         <div class="img-container">
-            <img :src="imgSrc" alt="" class="main-img">
+            <img :src="images[activeImage]" alt="" class="main-img">
             <div class="dots-container">
                 <i class="fa fa-circle" v-for="(img, index) in images" @click="onDotClick(img)" class="{active: activeImage === index}" aria-hidden="true"></i>
             </div>

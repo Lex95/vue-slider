@@ -10,14 +10,29 @@
 }
 /* provvisorio */
 .img-container {
-    width: 300px;
-    height: 200px;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    margin: 0 20px;
+}
+.main-img {
+    width: 100%;
+    height: 100%;
 }
 .dots-container {
-    padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     display: inline-block;
+    padding: 10px 0;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .fa-circle {
     color: white;
+    margin-left: 10px;
+}
+.fa-circle:last-child {
+    margin-right: 10px;
 }
