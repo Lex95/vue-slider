@@ -11,8 +11,20 @@ const app = new Vue({
         activeImage: 0
     },
     methods: {
-        onDotClick: function() {
-
+        onDotClick: function(index) {
+            this.activeImage = index; 
+        },
+        leftArrowClick: function() {
+            this.activeImage--;
+            if (this.activeImage < 0) {
+                this.activeImage = this.images.length - 1;
+            }
+        },
+        rightArrowClick: function() {
+            this.activeImage++;
+            if (this.activeImage > this.images.length - 1) {
+                this.activeImage = 0;
+            }
         }
     }
 })

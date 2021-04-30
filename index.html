@@ -15,16 +15,16 @@
 <body>
     <div class="container" id="app">
         <div class="left-arrow-container">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <i class="fa fa-chevron-left" @click="leftArrowClick()" aria-hidden="true"></i>
         </div>
         <div class="img-container">
             <img :src="images[activeImage]" alt="" class="main-img">
             <div class="dots-container">
-                <i class="fa fa-circle" v-for="(img, index) in images" @click="onDotClick(img)" class="{active: activeImage === index}" aria-hidden="true"></i>
+                <i class="fa fa-circle" v-for="(img, index) in images" @click="onDotClick(index)" class="{active: activeImage == index}" aria-hidden="true"></i>
             </div>
         </div>
         <div class="right-arrow-container">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <i class="fa fa-chevron-right" @click="rightArrowClick()" aria-hidden="true"></i>
         </div>
     </div>
     <script src="script.js"></script>

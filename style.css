@@ -36,3 +36,6 @@
 .fa-circle:last-child {
     margin-right: 10px;
 }
+.fa-circle:active {
+    color: blue;
+}
