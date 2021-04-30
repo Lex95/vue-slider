@@ -20,7 +20,7 @@
         <div class="img-container">
             <img :src="images[activeImage]" alt="" class="main-img">
             <div class="dots-container">
-                <i class="fa fa-circle" v-for="(img, index) in images" @click="onDotClick(index)" class="{active: activeImage == index}" aria-hidden="true"></i>
+                <i class="fa fa-circle" v-for="(img, index) in images" @click="onDotClick(index)" :class="{active: activeImage == index}" aria-hidden="true"></i>
             </div>
         </div>
         <div class="right-arrow-container">

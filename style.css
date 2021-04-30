@@ -25,7 +25,7 @@
     padding: 10px 0;
     border-radius: 20px;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -36,6 +36,6 @@
 .fa-circle:last-child {
     margin-right: 10px;
 }
-.fa-circle:active {
+.fa-circle.active {
     color: blue;
 }

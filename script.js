@@ -28,3 +28,5 @@ const app = new Vue({
         }
     }
 })
+
+// da aggiungere ancora la rotazione con frecce e  bonus
