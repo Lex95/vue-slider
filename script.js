@@ -29,11 +29,18 @@ const app = new Vue({
         arrowKeyPress: addEventListener("keydown", function (event) {
             if (event.key == "ArrowRight") {
                 app.rightArrowClick();
+                // chiedere perchè non funziona con this.rightArrowClick();
             } else if (event.key == "ArrowLeft") {
                 app.leftArrowClick();
             }
-        })
+        }),
+        // autoPlay: function () {
+        //     console.log("we");
+        //     var clock = setInterval(() => this.rightArrowClick(), 3000)
+        // }
     }
 })
 
 // da aggiungere ancora bonus
+const TIMER = 3;
+var clock = setInterval(() => app.rightArrowClick(), 1000 * TIMER)
