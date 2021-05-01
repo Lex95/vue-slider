@@ -11,22 +11,29 @@ const app = new Vue({
         activeImage: 0
     },
     methods: {
-        onDotClick: function(index) {
-            this.activeImage = index; 
+        onDotClick: function (index) {
+            this.activeImage = index;
         },
-        leftArrowClick: function() {
+        leftArrowClick: function () {
             this.activeImage--;
             if (this.activeImage < 0) {
                 this.activeImage = this.images.length - 1;
             }
         },
-        rightArrowClick: function() {
+        rightArrowClick: function () {
             this.activeImage++;
             if (this.activeImage > this.images.length - 1) {
                 this.activeImage = 0;
             }
-        }
+        },
+        arrowKeyPress: addEventListener("keydown", function (event) {
+            if (event.key == "ArrowRight") {
+                app.rightArrowClick();
+            } else if (event.key == "ArrowLeft") {
+                app.leftArrowClick();
+            }
+        })
     }
 })
 
-// da aggiungere ancora la rotazione con frecce e  bonus
+// da aggiungere ancora bonus
