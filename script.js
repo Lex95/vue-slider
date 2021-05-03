@@ -14,6 +14,7 @@ const app = new Vue({
         onDotClick: function (index) {
             this.activeImage = index;
         },
+        // potevo usare una funzione unica che in base all'input andava avanti o indietro
         leftArrowClick: function () {
             this.activeImage--;
             if (this.activeImage < 0) {
@@ -26,21 +27,30 @@ const app = new Vue({
                 this.activeImage = 0;
             }
         },
+        // tecnicamente scorretto
         arrowKeyPress: addEventListener("keydown", function (event) {
             if (event.key == "ArrowRight") {
                 app.rightArrowClick();
-                // chiedere perchè non funziona con this.rightArrowClick();
             } else if (event.key == "ArrowLeft") {
                 app.leftArrowClick();
             }
-        }),
-        // autoPlay: function () {
-        //     console.log("we");
-        //     var clock = setInterval(() => this.rightArrowClick(), 3000)
-        // }
+        })
+    },
+    /*
+    tutti questi metodi vanno definiti separatamente dai methods
+    mounted: function() {
+        document.querySelector(.slider.container).focus()
+        // focussare l'elemento dove ho messo il tabindex
+
+        // posso mettere qui anche il setInterval
+        setInterval(function() {
+            this.rightArrowClick()
+        }, 3000)
+        // non funziona perchè lo scope della function non fa si che il this prenda il valore giusto
+        setInterval(() => {this.rightArrowClick()}, 3000)
     }
+    */
 })
 
-// da aggiungere ancora bonus
 const TIMER = 3;
 var clock = setInterval(() => app.rightArrowClick(), 1000 * TIMER)

@@ -39,3 +39,9 @@
 .fa-circle.active {
     color: blue;
 }
+
+/* per far si che non ci sia l'outline al caricamento della pagina
+.slider-container:active,
+.slider-container:focus {
+    outline: none;
+} */
